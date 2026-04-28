@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Base</title>
+</head>
+<body>
+
+<!-- Fragment with parameters -->
+<div th:fragment="parent(name, youtube, github)">
+
+    <div class="bg-gray-200 w-1/2 p-4 flex flex-col justify-center space-y-3 mx-auto">
+
+        <h1 th:text="${name}"></h1>
+
+        <p>YouTube channel: <span th:text="${youtube}"></span></p>
+        <p>Github Repo: <span th:text="${github}"></span></p>
+        <a th:href="${github}" th:text="${github}"></a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
